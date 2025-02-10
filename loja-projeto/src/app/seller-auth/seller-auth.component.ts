@@ -19,3 +19,6 @@ export class SellerAuthComponent implements OnInit{
     );
   }
 }
+
+
+// 1 e 30 (tempo do vídeo)
