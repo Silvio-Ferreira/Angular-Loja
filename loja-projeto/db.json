@@ -1,16 +1,10 @@
 {
   "seller": [
     {
-      "id": "9d6f",
+      "id": "d2df",
       "name": "Silvio",
-      "password": "Silvio",
-      "email": "silvio@gmail.com"
-    },
-    {
-      "id": "e444",
-      "name": "Cronograma",
-      "password": "Cronograma",
-      "email": "Cronograma"
+      "email": "silvio@gmail.com",
+      "password": "123"
     }
   ]
 }

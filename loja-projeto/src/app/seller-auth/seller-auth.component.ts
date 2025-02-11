@@ -10,12 +10,36 @@ import { SignUp } from '../data-types';
   styleUrl: './seller-auth.component.css'
 })
 export class SellerAuthComponent implements OnInit{
-  constructor(private seller:SellerService, private router:Router){}
+  showLogin = false
+  authError:String='';
+  constructor(private seller:SellerService){}
 
-  ngOnInit(): void {}
+
+  ngOnInit():void{
+    this.seller.reloadSeller()
+  }
 
   signUp(data:SignUp):void{
+    console.warn(data)
     this.seller.userSignUp(data)
+  }
+
+  login(data:SignUp):void{
+    this.seller.userLogin(data)
+    this.seller.isLoginError.subscribe((isError)=>{
+      if(isError){
+        this.authError="E-mail ou senha não corresponde!"
+      }
+    })
+    console.warn(data)
+  }
+
+  openLogin(){
+    this.showLogin = true
+  }
+
+  openSignUp(){
+    this.showLogin = false
   }
 }
 
