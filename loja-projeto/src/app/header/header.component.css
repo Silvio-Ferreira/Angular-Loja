@@ -8,13 +8,20 @@
   font-size: 40px;
 }
 
-.logo{
-  color: #0084ff;
+h1 a{
+  text-decoration: none;
 }
 
-.logo span{
+.logo a {
+  text-decoration: none;
+  color: #0084ff;
+  font-weight: bold;
+}
+
+.logo a span {
   color: #2e2c2c;
 }
+
 
 .nav ul{
   display: inline-flex;

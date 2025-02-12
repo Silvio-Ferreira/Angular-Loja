@@ -5,6 +5,12 @@
       "name": "Silvio",
       "email": "silvio@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "b2ce",
+      "name": "Anderson",
+      "email": "Anderson@gmail.com",
+      "password": "123"
     }
   ]
 }
