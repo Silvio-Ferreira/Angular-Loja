@@ -1,7 +1,7 @@
 <div class="seller-auth">
   <div *ngIf="!showLogin" class="sign-up">
     <h1>Cadastrar Vendedor</h1>
-    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="comom-form">
+    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
       <input class="form-input" type="text" ngModel name="name" placeholder="Digite seu nome"/>
       <input class="form-input" type="text" ngModel name="email" placeholder="Digite seu e-mail"/>
       <input class="form-input" type="password" ngModel name="password" placeholder="Digite sua senha"/>
@@ -13,7 +13,7 @@
   <div *ngIf="showLogin" class="login">
     <h1>Login</h1>
     <p class="error-p">{{authError}}</p>
-    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="comom-form">
+    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
       <input class="form-input" type="text" ngModel name="email" placeholder="Digite seu e-mail"/>
       <input class="form-input" type="password" ngModel name="password" placeholder="Digite sua senha"/>
       <button class="form-button">Login</button>

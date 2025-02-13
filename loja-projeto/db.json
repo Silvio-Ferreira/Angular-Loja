@@ -12,5 +12,16 @@
       "email": "Anderson@gmail.com",
       "password": "123"
     }
+  ],
+  "products": [
+    {
+      "id": "0faf",
+      "name": "Garrafa",
+      "price": "29,90",
+      "color": "Cinza",
+      "category": "Garrafas",
+      "description": "Garrafa d'água térmica perfeita para praticar esportes.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAwQTBdZNdhXy3Ok-D8MToFp-MsfqqBujSg&s"
+    }
   ]
 }
