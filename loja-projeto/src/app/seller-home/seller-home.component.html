@@ -1,1 +1,28 @@
-<p>Página home dos vendedores</p>
+<div class="product-list">
+  <div class="container">Todos os produtos</div>
+  <p class="message-p">{{productMessage}}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Imagem do Produto</th>
+        <th>Nome do Produto</th>
+        <th>Preço do Produto</th>
+        <th>Cor do Produto</th>
+        <th>Categoria do Produto</th>
+        <th>Descrição do Produto</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of productList">
+        <td><img src="{{item.image}}"></td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.color}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.description}}</td>
+        <td><button (click)="deleteProduct(item.id)" class="delete-button">DELETAR</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

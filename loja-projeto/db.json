@@ -19,9 +19,18 @@
       "name": "Garrafa",
       "price": "29,90",
       "color": "Cinza",
-      "category": "Garrafas",
+      "category": "Esporte",
       "description": "Garrafa d'água térmica perfeita para praticar esportes.",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAwQTBdZNdhXy3Ok-D8MToFp-MsfqqBujSg&s"
+    },
+    {
+      "id": "bbdf",
+      "name": "Luva de Boxe",
+      "price": "200",
+      "color": "Preto e amarelo",
+      "category": "Boxe",
+      "description": "Kit Completo para Treino: Inclui luvas de boxe e Muay Thai, protetor bucal, e bandagens elásticas, oferecendo uma solução integrada para treinamento e combate.\nLuvas de Alta Qualidade: Projetadas com espuma de alta densidade para absorção superior de impactos, revestimento em PU Flexível fosco para durabilidade e design moderno, além de fechamento ajustável para ajuste personalizado.\nConforto e Proteção Avançados: Forro macio e respirável mantém as mãos frescas e secas, enquanto o protetor bucal e as bandagens elásticas garantem segurança e suporte adicional.\nVersatilidade de Uso: Ideal tanto para iniciantes quanto para atletas experientes, adequado para treinos em saco de pancadas e sparring.",
+      "image": "https://m.media-amazon.com/images/I/71H5YmlGLOL._AC_SX425_.jpg"
     }
   ]
 }
