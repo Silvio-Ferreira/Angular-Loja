@@ -15,14 +15,13 @@ img{
 }
 
 .container{
-  max-width: 700px;
   text-align: center;
   color: #2e2c2c;
   font-size: 40px;
   padding-bottom: 5px;
 }
 
-.delete-button{
+/* .delete-button{ --------------- botão para deletar
   color: white;
   background-color: rgb(248, 7, 7);
   border-radius: 10px;
@@ -32,5 +31,20 @@ img{
   cursor: pointer;
   font-size: 15px;
 
+} */
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
+.delete {
+  color: rgb(133, 5, 5);
+  cursor: pointer;
+}
+
+.edit {
+  color: #2e2c2c;
+}
