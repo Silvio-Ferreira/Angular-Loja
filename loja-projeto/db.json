@@ -11,6 +11,18 @@
       "name": "Anderson",
       "email": "Anderson@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "113d",
+      "name": "teste",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "de92",
+      "name": "wesley",
+      "email": "wesley",
+      "password": "wesley"
     }
   ],
   "products": [
