@@ -14,85 +14,19 @@
 <div class="product-list-wrapper">
   <h1>Produtos em destaque</h1>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" *ngFor="let item of trendyProducts">
       <div class="product-item">
         <img
-          src="https://a-static.mlcdn.com.br/1500x1500/kit-luva-de-boxe-e-muay-thai-first-fx1-pretorian/pretorian/200r05028zzzj36/d5f4586578a18a8b18752d93aee2bada.jpeg"
+          src="{{item.image}}"
         />
 
         <div class="product-details">
-          <h6 class="name-head">Novidade!<br> Luva de Boxe</h6>
+          <h6 class="name-head">Novidade!<br>{{item.name}}</h6>
           <div class="product-price">
-            <h6>Preço: R$ 200,00</h6>
+            <h6>Preço: R$ {{item.price}}</h6>
           </div>
           <div class="product-color">
-            <h6>Cor: Preto e amarelo</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="#"> + Detalhes </a>
-          <a href="#"> + Carrinho </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="product-item">
-        <img
-          src="https://cdn.iset.io/assets/01513/produtos/508/-vamp-bucal-spk--6-.jpg"
-        />
-
-        <div class="product-details">
-          <h6 class="name-head">Novidade!<br> Protetor Bucal</h6>
-          <div class="product-price">
-            <h6>Preço: R$ 19,39</h6>
-          </div>
-          <div class="product-color">
-            <h6>Cor: Preto</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="#"> + Detalhes </a>
-          <a href="#"> + Carrinho </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="product-item">
-        <img
-          src="https://decathlonpro.vtexassets.com/arquivos/ids/2690138/saco-de-pancada-tb1000--100cm--20kg--tecido-poliester--4-correntes--outshock--2-anos-garantia1.jpg?v=637480542636530000"
-        />
-
-        <div class="product-details">
-          <h6 class="name-head">Novidade!<br> Saco de pancada</h6>
-          <div class="product-price">
-            <h6>Preço: R$ 890,00</h6>
-          </div>
-          <div class="product-color">
-            <h6>Cor: Preto</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="#"> + Detalhes </a>
-          <a href="#"> + Carrinho </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="product-item">
-        <img
-          src="https://cdn.dooca.store/43781/products/3pgnxlbjyeolnmzi7n4gobqsf5zqw67x1r6x.png?v=1693503439&webp=0"
-        />
-
-        <div class="product-details">
-          <h6 class="name-head">Novidade!<br> Corda de pular</h6>
-          <div class="product-price">
-            <h6>Preço: R$ 65,00</h6>
-          </div>
-          <div class="product-color">
-            <h6>Cor: Preto e vermelho</h6>
+            <h6>Cor: {{item.color}}</h6>
           </div>
         </div>
         <div class="product-footer">

@@ -17,7 +17,7 @@
     {
       "name": "Garrafa",
       "price": "29,90",
-      "color": "Cinza",
+      "color": "Preto",
       "category": "Esporte",
       "description": "Garrafa d'água térmica perfeita para praticar esportes.",
       "image": "https://images.tcdn.com.br/img/img_prod/589314/garrafa_termica_shark_1200_ml_preto_8499_1_ec81e9fefd6bacfd787c4cd84c404863.jpg",
@@ -25,7 +25,7 @@
     },
     {
       "name": "Luva de Boxe",
-      "price": "200",
+      "price": "200,00",
       "color": "Preto e amarelo",
       "category": "Esporte",
       "description": "Kit Completo para Treino: Inclui luvas de boxe e Muay Thai, protetor bucal, e bandagens elásticas, oferecendo uma solução integrada para treinamento e combate.\nLuvas de Alta Qualidade: Projetadas com espuma de alta densidade para absorção superior de impactos, revestimento em PU Flexível fosco para durabilidade e design moderno, além de fechamento ajustável para ajuste personalizado.\nConforto e Proteção Avançados: Forro macio e respirável mantém as mãos frescas e secas, enquanto o protetor bucal e as bandagens elásticas garantem segurança e suporte adicional.\nVersatilidade de Uso: Ideal tanto para iniciantes quanto para atletas experientes, adequado para treinos em saco de pancadas e sparring.",
@@ -53,7 +53,7 @@
     {
       "name": "Corda de pular",
       "price": "65,00",
-      "color": "Preto e vermelho",
+      "color": "Preto",
       "category": "Esporte",
       "description": "Corda de pular Profissional.",
       "image": "https://cdn.dooca.store/43781/products/3pgnxlbjyeolnmzi7n4gobqsf5zqw67x1r6x.png?v=1693503439&webp=0",
