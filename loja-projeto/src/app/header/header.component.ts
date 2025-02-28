@@ -13,7 +13,7 @@ import { product } from '../data-types';
 export class HeaderComponent {
   menuType: string='default';
   sellerName: string = '';
-  searchResult: undefined | product[];
+  searchResult: product[] = [];
 
   constructor(private route:Router, private product:ProductService){}
 
