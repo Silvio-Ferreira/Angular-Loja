@@ -1,9 +1,10 @@
 <nav class="nav">
   <h1 class="logo"><a routerLink="/">MY <span>STORE</span></a></h1>
+
   <div *ngIf="menuType==='default'" class="nav-search">
-    <input type="text" (keyup)="searchProducts($event)" placeholder="Pesquisar Produtos" />
-    <button>Pesquisar</button>
-    <ul class="suggested-result" [class.has-items]="searchResult.length > 0">
+    <input type="text" #searchInput (keyup)="searchProducts($event)" (blur)="hideSearch()" placeholder="Pesquisar Produtos" />
+    <button (click)="submitSearch(searchInput.value)">Pesquisar</button>
+    <ul class="suggested-result"  *ngIf="searchResult">
       <li *ngFor="let item of searchResult">
         <a>{{item.name}}</a>
       </li>
@@ -26,4 +27,4 @@
   </div>
 </nav>
 
-
+<!-- resolver problema 6:50 aprox -->

@@ -58,6 +58,15 @@
       "description": "Corda de pular Profissional.",
       "image": "https://cdn.dooca.store/43781/products/3pgnxlbjyeolnmzi7n4gobqsf5zqw67x1r6x.png?v=1693503439&webp=0",
       "id": "8aea"
+    },
+    {
+      "id": "3b8a",
+      "name": "teste",
+      "price": "teste",
+      "color": "teste",
+      "category": "teste",
+      "description": "teste",
+      "image": "teste"
     }
   ]
 }

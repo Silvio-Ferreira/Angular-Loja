@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProductService } from '../services/product.service';
 import { product } from '../data-types';
 
+
 @Component({
   selector: 'app-header',
   standalone: false,
@@ -13,7 +14,7 @@ import { product } from '../data-types';
 export class HeaderComponent {
   menuType: string='default';
   sellerName: string = '';
-  searchResult: product[] = [];
+  searchResult: undefined | product[];
 
   constructor(private route:Router, private product:ProductService){}
 
@@ -39,13 +40,37 @@ export class HeaderComponent {
     this.route.navigate(['/']);
   }
 
-  searchProducts(query:KeyboardEvent) {
-    if (query) {
-      const element = query.target as HTMLInputElement;
-      this.product.searchProducts(element.value).subscribe((result)=>{
+  // searchProducts(query:KeyboardEvent) {
+  //   if (query) {
+  //     const element = query.target as HTMLInputElement;
+  //     this.product.searchProducts(element.value).subscribe((result)=>{
+  //     if (result.length > 5) {
+  //       result.length = 5;
+  //     }
+  //     this.searchResult=result;
+  //     })
+  //   }
+  // }
+
+  searchProducts(query: KeyboardEvent) {
+    const element = query.target as HTMLInputElement;
+    if (element?.value) {
+      this.product.searchProducts(element.value).subscribe((result) => {
+        if (result.length > 5) {
+          result.length = 5;  // Limita os resultados a 5
+        }
         this.searchResult = result;
-      })
+      });
     }
+  }
+
+
+  hideSearch() {
+    this.searchResult=undefined;
+  }
+
+  submitSearch(val:string) {
+    this.route.navigate([`search/${val}`])
   }
 
 }
