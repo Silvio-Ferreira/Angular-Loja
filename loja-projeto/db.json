@@ -59,5 +59,13 @@
       "image": "https://cdn.dooca.store/43781/products/3pgnxlbjyeolnmzi7n4gobqsf5zqw67x1r6x.png?v=1693503439&webp=0",
       "id": "8aea"
     }
+  ],
+  "users": [
+    {
+      "name": "Silvio_User",
+      "email": "silvioUser@gmail.com",
+      "password": "123",
+      "id": 1
+    }
   ]
 }

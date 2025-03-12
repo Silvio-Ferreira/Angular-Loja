@@ -18,4 +18,3 @@ export interface product {
   description: string;
   image: string;
 }
-

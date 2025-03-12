@@ -1,0 +1,30 @@
+<div class="user-auth">
+  <h1>Cadastrar Usuários</h1>
+  <form #userSignup="ngForm" class="common-form" (ngSubmit)="signup(userSignup.value)">
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Digite seu nome"
+    name="name"
+    ngModel
+    />
+
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Digite seu e-mail"
+    name="email"
+    ngModel
+    />
+
+    <input
+    type="password"
+    class="form-input"
+    placeholder="Digite sua senha"
+    name="password"
+    ngModel
+    />
+
+    <button class="form-button">Cadastrar</button>
+  </form>
+</div>
