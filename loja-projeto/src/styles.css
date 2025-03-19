@@ -3,7 +3,23 @@
 
 }
 
+router-outlet {
+  flex: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  flex: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+}
+
+
 .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Faz com que a página ocupe toda a altura da tela */
   max-width: 95%;
   background: #fff;
 }

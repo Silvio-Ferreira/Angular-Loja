@@ -1,23 +1,78 @@
 <div class="seller-auth">
   <div *ngIf="!showLogin" class="sign-up">
     <h1>Cadastrar Vendedor</h1>
-    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
-      <input class="form-input" type="text" ngModel name="name" placeholder="Digite seu nome"/>
-      <input class="form-input" type="text" ngModel name="email" placeholder="Digite seu e-mail"/>
-      <input class="form-input" type="password" ngModel name="password" placeholder="Digite sua senha"/>
+    <form
+      #sellerSignUp="ngForm"
+      (ngSubmit)="signUp(sellerSignUp.value)"
+      class="common-form"
+    >
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="name"
+        placeholder="Digite seu nome"
+      />
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="email"
+        placeholder="Digite seu e-mail"
+      />
+      <input
+        class="form-input"
+        type="password"
+        ngModel
+        name="password"
+        placeholder="Digite sua senha"
+      />
       <button class="form-button">Cadastrar</button>
-      <a class="auth-toggle-link" (click)="openLogin()">JÁ POSSUI UMA CONTA? - CLIQUE AQUI PARA ENTRAR</a>
+      <a class="auth-toggle-link" (click)="openLogin()"
+        >JÁ POSSUI UMA CONTA? - CLIQUE AQUI PARA ENTRAR</a
+      >
     </form>
   </div>
 
   <div *ngIf="showLogin" class="login">
-    <h1>Login</h1>
-    <p class="error-p">{{authError}}</p>
-    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
-      <input class="form-input" type="text" ngModel name="email" placeholder="Digite seu e-mail"/>
-      <input class="form-input" type="password" ngModel name="password" placeholder="Digite sua senha"/>
-      <button class="form-button">Login</button>
-      <a class="auth-toggle-link" (click)="openSignUp()">NÃO POSSUI UMA CONTA? - CLIQUE AQUI PARA SE CADASTRAR</a>
+    <h1>Login de vendedor</h1>
+    <p class="error-p">{{ authError }}</p>
+    <form
+      #sellerLogin="ngForm"
+      (ngSubmit)="login(sellerLogin.value)"
+      class="common-form"
+    >
+      <input
+        class="form-input"
+        type="text"
+        name="email"
+        placeholder="Digite seu e-mail"
+        ngModel
+        email
+        #email = "ngModel"
+        required
+      />
+
+      <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Por favor, digite um e-mail válido!</span></p>
+
+      <input
+        class="form-input"
+        type="password"
+        name="password"
+        placeholder="Digite sua senha"
+        ngModel
+        minlength="2"
+        maxlength="20"
+        #password="ngModel"
+        required
+        />
+
+        <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Por favor, digite uma senha válida!</span></p>
+
+      <button [disabled]="sellerLogin.invalid" class="form-button">Login</button>
+      <a class="auth-toggle-link" (click)="openSignUp()"
+        >NÃO POSSUI UMA CONTA? - CLIQUE AQUI PARA SE CADASTRAR</a
+      >
     </form>
   </div>
 </div>

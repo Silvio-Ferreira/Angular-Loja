@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
-  isLoginError= new EventEmitter<boolean>(false)
+  isLoginError= new EventEmitter<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
   userSignUp(data: SignUp) {
@@ -17,8 +17,8 @@ export class SellerService {
       .subscribe((result) => {
         console.warn(result)
         if(result){
-          localStorage.setItem('seller',JSON.stringify(result.body))
-          this.router.navigate(['seller-home'])
+          localStorage.setItem('seller',JSON.stringify(result.body));
+          this.router.navigate(['seller-home']);
         }
       });
   }

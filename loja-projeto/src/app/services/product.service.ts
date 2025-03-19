@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductService {
+  quantity: number;
 
   constructor(private http:HttpClient) { }
   addProduct(data:product){

@@ -1,30 +1,70 @@
 <div class="user-auth">
-  <h1>Cadastrar Usuários</h1>
-  <form #userSignup="ngForm" class="common-form" (ngSubmit)="signup(userSignup.value)">
+  <div *ngIf="!showLogin" class="user-SignUp">
+    <h1>Cadastrar Usuários</h1>
+    <form #userSignup="ngForm" class="common-form" (ngSubmit)="signup(userSignup.value)">
+      <input
+      type="text"
+      class="form-input"
+      placeholder="Digite seu nome"
+      name="name"
+      ngModel
+      />
+
+      <input
+      type="text"
+      class="form-input"
+      placeholder="Digite seu e-mail"
+      name="email"
+      ngModel
+      />
+
+      <input
+      type="password"
+      class="form-input"
+      placeholder="Digite sua senha"
+      name="password"
+      ngModel
+      />
+
+      <button class="form-button">Cadastrar</button>
+      <a class="auth-toggle-link" (click)="openLogin()">JÁ POSSUI UMA CONTA? - CLIQUE AQUI PARA ENTRAR</a>
+    </form>
+  </div>
+
+  <div *ngIf="showLogin" class="user-Login">
+    <h1>Login de usuários</h1>
+  <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
+    <p class="error-p">{{authError}}</p>
     <input
     type="text"
     class="form-input"
-    placeholder="Digite seu nome"
-    name="name"
+    name="email"
+    placeholder="Digite seu e-mail"
     ngModel
+    email
+    #email = "ngModel"
+    required
     />
 
-    <input
-    type="text"
-    class="form-input"
-    placeholder="Digite seu e-mail"
-    name="email"
-    ngModel
-    />
+    <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Por favor, digite um e-mail válido!</span></p>
 
     <input
     type="password"
     class="form-input"
-    placeholder="Digite sua senha"
     name="password"
+    placeholder="Digite sua senha"
     ngModel
+    minlength="2"
+    maxlength="20"
+    #password="ngModel"
+    required
     />
 
-    <button class="form-button">Cadastrar</button>
+    <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Por favor, digite uma senha válida!</span></p>
+
+    <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+    <a class="auth-toggle-link" (click)="openSignUp()">NÃO POSSUI UMA CONTA? - CLIQUE AQUI PARA SE CADASTRAR</a>
   </form>
+  </div>
 </div>
+

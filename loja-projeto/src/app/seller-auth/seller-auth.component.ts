@@ -28,7 +28,7 @@ export class SellerAuthComponent implements OnInit{
     this.seller.userLogin(data)
     this.seller.isLoginError.subscribe((isError)=>{
       if(isError){
-        this.authError="E-mail ou senha não corresponde!"
+        this.authError="E-mail ou senha não correspondem!"
       }
     })
     console.warn(data)

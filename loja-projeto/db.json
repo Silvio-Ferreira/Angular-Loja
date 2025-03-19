@@ -5,12 +5,6 @@
       "name": "Silvio",
       "email": "silvio@gmail.com",
       "password": "123"
-    },
-    {
-      "id": "b2ce",
-      "name": "Anderson",
-      "email": "Anderson@gmail.com",
-      "password": "123"
     }
   ],
   "products": [
@@ -58,12 +52,21 @@
       "description": "Corda de pular Profissional.",
       "image": "https://cdn.dooca.store/43781/products/3pgnxlbjyeolnmzi7n4gobqsf5zqw67x1r6x.png?v=1693503439&webp=0",
       "id": "8aea"
+    },
+    {
+      "name": "Bola de futebol",
+      "price": "99,90",
+      "color": "Branco",
+      "category": "Esporte",
+      "description": "Bola de futebol para jogar em campo de grama ou grama sintética.",
+      "image": "https://lh6.googleusercontent.com/proxy/BzFHWNLpwn3AFBlLQ3KizAbaPirOBjUnyX4T6pCuHeQ0NhrU0d_mwYSnDhatruOaezVyUJBsdEFuzYtp6fs9QE5q6raWsJsIpRM9DCGiQBoFS_Jq4A7L4Up-TE4dFU0s56ABiITxSUuIAi_3rVo",
+      "id": "dVAgccw"
     }
   ],
   "users": [
     {
-      "name": "Silvio_User",
-      "email": "silvioUser@gmail.com",
+      "name": "user",
+      "email": "user@gmail.com",
       "password": "123",
       "id": 1
     }
