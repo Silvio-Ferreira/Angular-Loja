@@ -10,8 +10,8 @@
       <h6>Categoria: {{productData.category}}</h6>
       <h6>Descrição: {{productData.description}}</h6>
       <button class="form-button">Comprar</button>
-      <button class="form-button">Remover Produtos</button>
-      <button class="form-button" (click)="AddToCart()">+ Carrinho</button>
+      <button *ngIf="!removeCart" (click)="AddToCart()" class="form-button" >+ Carrinho</button>
+      <button *ngIf="removeCart" (click)="RemoveToCart(productData.id)" class="form-button">Remover Produtos</button>
       <div class="quantity-group">
         <button (click)="handleQuantity('min')">-</button>
         <input type="text" value="{{productQuantity}}"/>

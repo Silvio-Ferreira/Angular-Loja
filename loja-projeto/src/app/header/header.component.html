@@ -1,7 +1,7 @@
 <nav class="nav">
   <h1 class="logo"><a routerLink="/">MY <span>STORE</span></a></h1>
 
-  <div *ngIf="menuType==='default'" class="nav-search">
+  <div *ngIf="menuType!=='seller'" class="nav-search">
     <input type="text" #searchInput (keyup)="searchProducts($event)" (blur)="hideSearch()" placeholder="Pesquisar Produtos" />
     <button (click)="submitSearch(searchInput.value)">Pesquisar</button>
     <ul class="suggested-result"  *ngIf="searchResult">
@@ -15,13 +15,13 @@
       <li><a href="#">Home</a></li>
       <li><a routerLink="seller-auth">Vendedores</a></li>
       <li><a routerLink="/user-auth">Login/Cadastrar</a></li>
-      <li><a href="#">Carrinho(0)</a></li>
+      <li><a href="#">Carrinho({{cartItems}})</a></li>
     </ul>
 
     <ul *ngSwitchCase="'user'">
       <li><a href="#">Home</a></li>
       <li><a routerLink="/user-auth">{{userName | titlecase}}</a></li>
-      <li><a href="#">Carrinho(0)</a></li>
+      <li><a href="#">Carrinho({{cartItems}})</a></li>
       <li><a (click)="userLogout()">Sair</a></li>
     </ul>
 

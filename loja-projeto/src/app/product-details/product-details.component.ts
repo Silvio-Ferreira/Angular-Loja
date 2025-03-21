@@ -13,13 +13,24 @@ export class ProductDetailsComponent implements OnInit{
   productData: undefined | product;
   productQuantity: number = 1;
   quantity: number = 1;
+  removeCart = false;
 
   constructor(private activeRoute:ActivatedRoute, private product: ProductService) { }
 
   ngOnInit(): void {
     let productId = this.activeRoute.snapshot.paramMap.get('productId');
     productId && this.product.getProduct(productId).subscribe((result)=>{
-      this.productData = result
+      this.productData = result;
+      let cartData = localStorage.getItem('localCart');
+      if (productId && cartData) {
+        let items = JSON.parse(cartData);
+        items = items.filter((item:product)=>productId===item.id.toString()); //O id já estava sendo tratado como string, caso ocorra erro, remova o toString
+        if (items.length) {
+          this.removeCart=true;
+        }else{
+          this.removeCart=false;
+        }
+      }
     })
   }
 
@@ -37,10 +48,18 @@ export class ProductDetailsComponent implements OnInit{
 
   AddToCart() {
     if (this.productData) {
-      this.product.quantity = this.productQuantity;
-      if(!localStorage.getItem('user')) {
-        // this.productData; localAddToCart
+      this.productData.quantity = this.productQuantity;
+      if(localStorage.getItem('user')) {
+        this.product.localAddToCart(this.productData);
+        this.removeCart=true;
       }
     }
   }
+
+  RemoveToCart(productId:string) {
+    this.product.removeItemFromCart(productId);
+    this.removeCart=false;
+  }
 }
+
+//9:40

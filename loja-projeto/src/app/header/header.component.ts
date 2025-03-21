@@ -11,11 +11,12 @@ import { product } from '../data-types';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent  implements OnInit{
   menuType: string='default';
-  sellerName: string = '';
-  searchResult: undefined | product[];
+  sellerName: string = "";
   userName: string = "";
+  searchResult: undefined | product[];
+  cartItems = 0;
 
   constructor(private route:Router, private product:ProductService){}
 
@@ -42,6 +43,15 @@ export class HeaderComponent {
         }
       }
     });
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length
+    }
+
+    this.product.cartData.subscribe((items)=> {
+      this.cartItems = items.length
+    });
+
   }
 
   logout(){
@@ -80,3 +90,4 @@ export class HeaderComponent {
   }
 
 }
+

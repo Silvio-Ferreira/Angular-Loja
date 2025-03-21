@@ -21,7 +21,7 @@
       "name": "Luva de Boxe",
       "price": "200,00",
       "color": "Preto e amarelo",
-      "category": "Esporte",
+      "category": "Lutas",
       "description": "Kit Completo para Treino: Inclui luvas de boxe e Muay Thai, protetor bucal, e bandagens elásticas, oferecendo uma solução integrada para treinamento e combate.",
       "image": "https://a-static.mlcdn.com.br/1500x1500/kit-luva-de-boxe-e-muay-thai-first-fx1-pretorian/pretorian/200r05028zzzj36/d5f4586578a18a8b18752d93aee2bada.jpeg",
       "id": "bbdf"
@@ -30,16 +30,16 @@
       "name": "Protetor Bucal",
       "price": "19,39",
       "color": "Preto",
-      "category": "Esporte",
+      "category": "Lutas",
       "description": "o protetor bucal vollo é produzido em eva, possui design anatômico, é moldável e ajustável ao contorno dos mais variados dentes; acompanha estojo portátil para higiene no armazenamento\nMarca: VOLLO SPORTS\nProduto de origem: JP\nComposição: eva",
       "image": "https://cdn.iset.io/assets/01513/produtos/508/-vamp-bucal-spk--6-.jpg",
       "id": "e21f"
     },
     {
       "name": "Saco de pancada",
-      "price": "890,00",
+      "price": "290,00",
       "color": "preto",
-      "category": "Esporte",
+      "category": "Lutas",
       "description": "Saco de pancada para treino de boxe.",
       "image": "https://decathlonpro.vtexassets.com/arquivos/ids/2690138/saco-de-pancada-tb1000--100cm--20kg--tecido-poliester--4-correntes--outshock--2-anos-garantia1.jpg?v=637480542636530000",
       "id": "c3ee"
@@ -59,7 +59,7 @@
       "color": "Branco",
       "category": "Esporte",
       "description": "Bola de futebol para jogar em campo de grama ou grama sintética.",
-      "image": "https://lh6.googleusercontent.com/proxy/BzFHWNLpwn3AFBlLQ3KizAbaPirOBjUnyX4T6pCuHeQ0NhrU0d_mwYSnDhatruOaezVyUJBsdEFuzYtp6fs9QE5q6raWsJsIpRM9DCGiQBoFS_Jq4A7L4Up-TE4dFU0s56ABiITxSUuIAi_3rVo",
+      "image": "https://decathlonpro.vtexassets.com/arquivos/ids/127961404/new-f100-size-5-white-yellow-5-branco-46.jpg?v=638488786769030000",
       "id": "dVAgccw"
     }
   ],
