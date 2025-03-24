@@ -11,6 +11,7 @@ export interface login {
 
 export interface product {
   id: string;
+  productId: undefined | string;
   name: string;
   price: number;
   category: string;

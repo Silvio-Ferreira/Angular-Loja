@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { product } from '../data-types';
+import { cart, product } from '../data-types';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -48,6 +48,7 @@ export class ProductService {
     let localCart = localStorage.getItem('localCart');
     if (!localCart) {
       localStorage.setItem('localCart', JSON.stringify([data]));
+      this.cartData.emit([data]);
     }else {
       cartData=JSON.parse(localCart);
       cartData.push(data)
@@ -64,6 +65,26 @@ export class ProductService {
       localStorage.setItem('localCart', JSON.stringify(items));
       this.cartData.emit(items);
     }
+  }
+
+  addToCart(cartData:cart){
+    return this.http.post(`http://localhost:3000/cart`, cartData);
+  }
+
+  getCartList(userId: string) {
+    return this.http
+    .get<product[]>('http://localhost:3000/cart?userId=' + userId, {
+      observe: 'response',
+    })
+    .subscribe((result)=>{
+      if (result && result.body) {
+        this.cartData.emit(result.body);
+      }
+    });
+  }
+
+  removeToCart(cartId:string){
+    return this.http.delete(`http://localhost:3000/cart/` + cartId);
   }
 }
 
