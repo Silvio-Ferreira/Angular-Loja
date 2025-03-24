@@ -4,7 +4,7 @@
 🚀 Funcionalidades
 - Cadastro e listagem de produtos;
 - Pesquisa de produtos;
-- Autenticação de vendedores.
+- Autenticação de vendedores e usuários.
 
 📌 Tecnologias Utilizadas
 - Angular 18;
