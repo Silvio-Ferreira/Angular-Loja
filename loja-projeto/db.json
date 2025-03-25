@@ -77,5 +77,78 @@
       "id": 2
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "name": "Garrafa",
+      "price": "29,90",
+      "color": "Preto",
+      "category": "Esporte",
+      "description": "Garrafa d'água térmica perfeita para praticar esportes.",
+      "image": "https://images.tcdn.com.br/img/img_prod/589314/garrafa_termica_shark_1200_ml_preto_8499_1_ec81e9fefd6bacfd787c4cd84c404863.jpg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": "0faf",
+      "id": 1
+    },
+    {
+      "name": "Luva de Boxe",
+      "price": "200,00",
+      "color": "Preto e amarelo",
+      "category": "Lutas",
+      "description": "Kit Completo para Treino: Inclui luvas de boxe e Muay Thai, protetor bucal, e bandagens elásticas, oferecendo uma solução integrada para treinamento e combate.",
+      "image": "https://a-static.mlcdn.com.br/1500x1500/kit-luva-de-boxe-e-muay-thai-first-fx1-pretorian/pretorian/200r05028zzzj36/d5f4586578a18a8b18752d93aee2bada.jpeg",
+      "quantity": 3,
+      "userId": 1,
+      "productId": "bbdf",
+      "id": 2
+    },
+    {
+      "name": "Protetor Bucal",
+      "price": "19,39",
+      "color": "Preto",
+      "category": "Lutas",
+      "description": "o protetor bucal vollo é produzido em eva, possui design anatômico, é moldável e ajustável ao contorno dos mais variados dentes; acompanha estojo portátil para higiene no armazenamento\nMarca: VOLLO SPORTS\nProduto de origem: JP\nComposição: eva",
+      "image": "https://cdn.iset.io/assets/01513/produtos/508/-vamp-bucal-spk--6-.jpg",
+      "quantity": 2,
+      "userId": 1,
+      "productId": "e21f",
+      "id": 3
+    },
+    {
+      "name": "Saco de pancada",
+      "price": "290,00",
+      "color": "preto",
+      "category": "Lutas",
+      "description": "Saco de pancada para treino de boxe.",
+      "image": "https://decathlonpro.vtexassets.com/arquivos/ids/2690138/saco-de-pancada-tb1000--100cm--20kg--tecido-poliester--4-correntes--outshock--2-anos-garantia1.jpg?v=637480542636530000",
+      "quantity": 1,
+      "userId": 1,
+      "productId": "c3ee",
+      "id": 4
+    },
+    {
+      "name": "Corda de pular",
+      "price": "65,00",
+      "color": "Preto",
+      "category": "Esporte",
+      "description": "Corda de pular Profissional.",
+      "image": "https://cdn.dooca.store/43781/products/3pgnxlbjyeolnmzi7n4gobqsf5zqw67x1r6x.png?v=1693503439&webp=0",
+      "quantity": 1,
+      "userId": 1,
+      "productId": "8aea",
+      "id": 5
+    },
+    {
+      "name": "Bola de futebol",
+      "price": "99,90",
+      "color": "Branco",
+      "category": "Esporte",
+      "description": "Bola de futebol para jogar em campo de grama ou grama sintética.",
+      "image": "https://decathlonpro.vtexassets.com/arquivos/ids/127961404/new-f100-size-5-white-yellow-5-branco-46.jpg?v=638488786769030000",
+      "quantity": 1,
+      "userId": 1,
+      "productId": "dVAgccw",
+      "id": 6
+    }
+  ]
 }

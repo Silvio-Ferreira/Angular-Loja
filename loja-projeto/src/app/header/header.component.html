@@ -12,16 +12,16 @@
   </div>
   <div [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'">
-      <li><a href="#">Home</a></li>
+      <li><a routerLink="">Home</a></li>
       <li><a routerLink="seller-auth">Vendedores</a></li>
       <li><a routerLink="/user-auth">Login/Cadastrar</a></li>
-      <li><a href="#">Carrinho({{cartItems}})</a></li>
+      <li><a routerLink="/user-auth">Carrinho({{cartItems}})</a></li>
     </ul>
 
     <ul *ngSwitchCase="'user'">
-      <li><a href="#">Home</a></li>
+      <li><a routerLink="">Home</a></li>
       <li><a routerLink="/user-auth">{{userName | titlecase}}</a></li>
-      <li><a href="#">Carrinho({{cartItems}})</a></li>
+      <li><a routerLink="cart-page">Carrinho({{cartItems}})</a></li>
       <li><a (click)="userLogout()">Sair</a></li>
     </ul>
 
@@ -29,7 +29,7 @@
       <li><a routerLink="seller-add-product">Adicionar Produtos</a></li>
       <li><a routerLink="/seller-home">Lista De Produtos</a></li>
       <li><a (click)="logout()">Sair</a></li>
-      <li><a href="#">{{sellerName | titlecase}}</a></li>
+      <li><a routerLink="#">{{sellerName | titlecase}}</a></li>
     </ul>
   </div>
 </nav>
