@@ -16,20 +16,20 @@
           <span>Quantidade do Produto: {{cart.quantity}}</span>
         </li>
         <li>
-          <button class="form-button">Remover</button>
+          <button class="form-button" (click)="removeToCart(cart.id)">Remover</button>
         </li>
       </ul>
     </div>
     <div class="col-sm-4 summary" >
       <h3>Soma Total</h3>
       <ul>
-        <li><span>Soma: </span><span>200</span></li>
-        <li><span>Desconto: </span><span>200</span></li>
-        <li><span>Entrega: </span><span>200</span></li>
+        <li><span>Valor: </span><span>R$ {{priceSummary.price.toFixed(2)}}</span></li>
+        <li><span>Desconto: R$</span><span>R$ {{priceSummary.discount.toFixed(2)}}</span></li>
+        <li><span>Entrega: </span><span>R$ {{priceSummary.delivery}}</span></li>
         <li>
-          <span><h4>Total: </h4></span><span><h4>300</h4></span>
+          <span><h4>Total: </h4></span><span><h4>R$ {{priceSummary.total.toFixed(2)}}</h4></span>
         </li>
-        <button class="form-button max-width">Comprar</button>
+        <button (click)="checkout()" class="form-button max-width">Comprar</button>
       </ul>
     </div>
   </div>

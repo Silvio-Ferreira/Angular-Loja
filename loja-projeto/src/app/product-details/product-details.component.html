@@ -9,7 +9,6 @@
       <h6 class="product-color">Cor: {{productData.color}}</h6>
       <h6>Categoria: {{productData.category}}</h6>
       <h6>Descrição: {{productData.description}}</h6>
-      <button class="form-button">Comprar</button>
       <button *ngIf="!removeCart" (click)="AddToCart()" class="form-button" >+ Carrinho</button>
       <button *ngIf="removeCart" (click)="RemoveToCart(productData.id)" class="form-button">Remover Produtos</button>
       <div class="quantity-group">
